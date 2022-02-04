@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+/* GLOBAL STYLES */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4 p,
+figure,
+picture {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  background-color: rgb(var(--clr-dark));
+  color: rgb(var(--clr-white));
+}
+a {
+  text-decoration: none;
+}
+
+/* imgs easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* remove animation for people who turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01sms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* =========
+utility clases 
+=========== */
+.hidden {
+  display: none;
+}
+.inline {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+.d-block {
+  display: block;
+}
+
+/* ---------
+Home
+------------ */
+.container {
+  background-image: url("./imgs/dube-bg.jpg");
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  align-items: center;
+}
+.content {
+  min-height: 100vh;
+  display: flex;
+  max-width: 1200px;
+  margin-inline: auto;
+  align-items: center;
+  gap: 4rem;
+}
+.content img {
+  width: 500px;
+}
+.main-text h1 {
+  max-width: 35rem;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: white;
+}
+.btn {
+  margin-top: 1.5rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  border-radius: 25px;
+  font-family: "Roboto" sans-serif;
+  font-size: 1.3rem;
+
+  background-color: rgba(255, 238, 0, 0.815);
+  font-weight: bold;
+}
+.btn a {
+  color: rgb(0, 0, 0);
+}
+.btn:hover {
+  background-color: rgba(255, 245, 107, 0.76);
+}
+/* ------------
+DRUMS
+----------------- */
+.drums {
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+  background-image: url("./imgs/drums-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container--drum {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-block: auto;
+}
+.drum-keys {
+  /* max-height: 100%; */
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  gap: 2rem;
+}
+.drum-keys div {
+  border: 4px solid black;
+  box-shadow: 5px 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.drum-keys div p {
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: "Roboto" sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgb(247, 181, 95);
+}
+
+/* Playing animation */
+.drum-keys .playing {
+  transform: scale(1.2);
+  border-color: rgba(185, 85, 3, 0.658);
+  box-shadow: 5px 5px 5px rgb(223, 100, 0);
+}
+/* QUOTE */
+.quote {
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(112, 112, 112);
+  max-width: 50rem;
+  text-align: end;
+  justify-content: end;
+  margin-inline-start: auto;
+}
+.author {
+  text-align: right;
+}
